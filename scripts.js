@@ -33,6 +33,21 @@ $(document).ready(function() {
         $('.content-product-feed').append('<p>'+ key + ' : ' + value + '</p>');
       });
     });
+
+
+    // show full feed
+    $.each(data, function(key, value) {
+      $('.content-full-feed').append('<p><b>'+ key + '</b></p>');
+      $.each(value, function(key, value){
+        if(value.category_name != null && value.category_description != null ) {
+          $('.content-full-feed').append('<p>' + key + ' => ' + value.category_name  + ', ' + value.category_description + '</p>');
+        }
+        if(value.product_name != null && value.product_category != null && value.product_price != null ) {
+          $('.content-full-feed').append('<p>' + key + ' => ' + value.product_name  + ', ' + value.product_category + ', ' + value.product_price + '</p>');
+        }
+      });
+    });
+
   });
 
     
