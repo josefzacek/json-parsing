@@ -25,6 +25,14 @@ $(document).ready(function() {
         $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
       });
     });
+
+
+    // show full product feed
+    $.each(product, function(key, value) {
+      $.each(value, function(key, value){
+        $('.content-product-feed').append('<p>'+ key + ' : ' + value + '</p>');
+      });
+    });
   });
 
     
