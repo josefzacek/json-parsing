@@ -11,6 +11,12 @@ $(document).ready(function() {
     // get top level
     category = data.Category;  // data['Category'];
     product = data.Product;    // date['Product'];
+
+
+    // show top level
+    $.each(data, function(key, value){
+      $('.content-top-level').append('<p>'+ key + '</p>');
+    });
   });
 
     
