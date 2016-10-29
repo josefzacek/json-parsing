@@ -51,6 +51,19 @@ $(document).ready(function() {
       });
     });
 
+
+    // product page show all products
+    var i = 1;
+    $.each(product, function(key, value) {
+      $.each(value, function(key, value){
+        $('.content-all-product-feed').append('<p><b>' + key.toUpperCase().replace(/\_/g, ' ') +'</b>: ' + value + '</p>');
+        if(i % 4 === 0){
+          $('.content-all-product-feed').append('<hr>');
+        }
+        i++;
+      });
+    });
+
   });
 
     
