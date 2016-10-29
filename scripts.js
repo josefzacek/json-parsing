@@ -7,6 +7,10 @@ $(document).ready(function() {
   // Load JSON-encoded data from the server using a GET HTTP request.
   // http://api.jquery.com/jquery.getjson/
   $.getJSON( url, function( data ) {
+
+    // get top level
+    category = data.Category;  // data['Category'];
+    product = data.Product;    // date['Product'];
   });
 
     
