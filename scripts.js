@@ -17,6 +17,14 @@ $(document).ready(function() {
     $.each(data, function(key, value){
       $('.content-top-level').append('<p>'+ key + '</p>');
     });
+
+
+    // show full category
+    $.each(category, function(key, value) {
+      $.each(value, function(key, value){
+        $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
+      });
+    });
   });
 
     
