@@ -23,6 +23,7 @@ $(document).ready(function() {
     $.each(category, function(key, value) {
       $.each(value, function(key, value){
         $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
+        // show categories in navigation
         if(key == 'category_name' ) {
           var extension = '.html';
           $('.navbar-nav').append('<li><a href=' + value.toLowerCase() + extension +' title=' + value + '>' + value + '</a></li>');
