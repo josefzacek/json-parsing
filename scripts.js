@@ -64,6 +64,15 @@ $(document).ready(function() {
       });
     });
 
+
+    // show all vegetable products on vegetable page
+    $.each(product, function(key, value) {
+      $.each(value, function(key, value){
+        $('.content-vegetable').append('<p>'+ value + '</p>');
+      });
+      $('.content-vegetable').append('<hr>');
+    });
+
   });
 
     
