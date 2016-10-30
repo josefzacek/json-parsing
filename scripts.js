@@ -24,7 +24,8 @@ $(document).ready(function() {
       $.each(value, function(key, value){
         $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
         if(key == 'category_name' ) {
-          $('.navbar-nav').append('<li><a href="#" title=' + value + '>'+ value + '</a></li>');
+          var extension = '.html';
+          $('.navbar-nav').append('<li><a href=' + value.toLowerCase() + extension +' title=' + value + '>' + value + '</a></li>');
         }
       });
     });
