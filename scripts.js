@@ -23,8 +23,10 @@ $(document).ready(function() {
     $.each(category, function(key, value) {
       $.each(value, function(key, value){
         $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
+        // show categories in navigation
         if(key == 'category_name' ) {
-          $('.navbar-nav').append('<li><a href="#" title=' + value + '>'+ value + '</a></li>');
+          var extension = '.html';
+          $('.navbar-nav').append('<li><a href=' + value.toLowerCase() + extension +' title=' + value + '>' + value + '</a></li>');
         }
       });
     });
@@ -62,6 +64,15 @@ $(document).ready(function() {
         }
         i++;
       });
+    });
+
+
+    // show all vegetable products on vegetable page
+    $.each(product, function(key, value) {
+      $.each(value, function(key, value){
+        $('.content-vegetable').append('<p>'+ value + '</p>');
+      });
+      $('.content-vegetable').append('<hr>');
     });
 
   });
