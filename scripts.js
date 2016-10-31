@@ -36,6 +36,8 @@ $(document).ready(function() {
           $.each(value, function(key, value){
             if (key == 'product_name') {
               $('.content').append('<h1>' + value + '</h1>');
+            } else if (key == 'product_id') {
+              $('.content').append('');
             } else {
               $('.content').append('<p>'+ value + '</p>');
             }
