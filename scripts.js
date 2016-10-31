@@ -14,9 +14,12 @@ $(document).ready(function() {
 
 
     // show top level
-    $.each(data, function(key, value){
-      $('.content-top-level').append('<p>'+ key + '</p>');
-    });
+    function topLevel() {
+      $('.content').empty();
+      $.each(data, function(key, value){
+        $('.content').append('<p>'+ key + '</p>');
+      });
+    }
 
 
     // show full category
