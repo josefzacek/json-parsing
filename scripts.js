@@ -21,25 +21,29 @@ $(document).ready(function() {
       });
     });
 
-    // show all products by category
-    function getProductByCategory(category) {
-      $('.content').empty();
-      $.each(product, function(key, value) {
-        if (value.product_category === category || category === 'All' || category === 'Parse JSON'){
-          $.each(value, function(key, value){
-            $('.content').append('<p>'+ value + '</p>');
-          });
-          $('.content').append('<hr>');
-        }
-      });
-    }
-
     // get link text in header navbar
     $('.navbar-brand, .nav li a').click(function(e) {
       e.preventDefault();
       var label = $(this).text();
       getProductByCategory(label);
     });
+
+    // show all products by category
+    function getProductByCategory(category) {
+      $('.content').empty();
+      $.each(product, function(key, value) {
+        if (value.product_category === category || category === 'All' || category === 'Parse JSON'){
+          $.each(value, function(key, value){
+            if (key == 'product_name') {
+              $('.content').append('<h1>' + value + '</h1>');
+            } else {
+              $('.content').append('<p>'+ value + '</p>');
+            }
+          });
+          $('.content').append('<hr>');
+        }
+      });
+    }
 
     // run this for first time only
     getProductByCategory('All');
