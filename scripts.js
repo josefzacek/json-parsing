@@ -69,13 +69,18 @@ $(document).ready(function() {
       });
     });
 
-
-    // show all vegetable products on vegetable page
-    $.each(product, function(key, value) {
-      $.each(value, function(key, value){
-        $('.content-vegetable').append('<p>'+ value + '</p>');
+    // show all products by category
+    function getProductByCategory(category) {
+      $('.content').empty();
+      $.each(product, function(key, value) {
+        if (value.product_category === category || category === 'All' || category === 'Parse JSON'){
+          $.each(value, function(key, value){
+            $('.content').append('<p>'+ value + '</p>');
+          });
+          $('.content').append('<hr>');
+        }
       });
-      $('.content-vegetable').append('<hr>');
+    }
     });
 
   });
