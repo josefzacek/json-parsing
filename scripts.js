@@ -34,7 +34,11 @@ $(document).ready(function() {
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON'){
           $.each(value, function(key, value){
-            $('.content').append('<p>'+ value + '</p>');
+            if (key == 'product_name') {
+              $('.content').append('<h1>' + value + '</h1>');
+            } else {
+              $('.content').append('<p>'+ value + '</p>');
+            }
           });
           $('.content').append('<hr>');
         }
