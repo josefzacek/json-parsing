@@ -34,7 +34,6 @@ $(document).ready(function() {
     $.each(category, function(key, value) {
       $.each(value, function(key, value){
         $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
-        }
       });
     });
 
