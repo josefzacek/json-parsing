@@ -10,7 +10,7 @@ $(document).ready(function() {
 
     // get top level
     category = data.Category;  // data['Category'];
-    product = data.Product;    // date['Product'];
+    product = data.Product;    // data['Product'];
 
 
     // show top level
