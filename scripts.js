@@ -12,6 +12,14 @@ $(document).ready(function() {
     category = data.Category;  // data['Category'];
     product = data.Product;    // data['Product'];
 
+    // list all categories in header navigation
+    $.each(category, function(key, value) {
+      $.each(value, function(key, value){
+        if(key == 'category_name' ) {
+          $('.navbar-nav').append('<li><a href="" title=' + value + '>' + value + '</a></li>');
+        }
+      });
+    });
 
     // show top level
     function topLevel() {
@@ -26,11 +34,6 @@ $(document).ready(function() {
     $.each(category, function(key, value) {
       $.each(value, function(key, value){
         $('.content-category-feed').append('<p>'+ key + ' : ' + value + '</p>');
-        // show categories in navigation
-        if(key == 'category_name' ) {
-          var extension = '.html';
-          $('.navbar-nav').append('<li><a href=' + value.toLowerCase() + extension +' title=' + value + '>' + value + '</a></li>');
-        }
       });
     });
 
