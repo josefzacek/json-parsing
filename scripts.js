@@ -81,6 +81,12 @@ $(document).ready(function() {
         }
       });
     }
+
+    // get link text in header navbar
+    $('.navbar-brand, .nav li a').click(function(e) {
+      e.preventDefault();
+      var label = $(this).text();
+      getProductByCategory(label);
     });
 
   });
