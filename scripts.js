@@ -21,6 +21,13 @@ $(document).ready(function() {
       });
     });
 
+    // get link text in header navbar
+    $('.navbar-brand, .nav li a').click(function(e) {
+      e.preventDefault();
+      var label = $(this).text();
+      getProductByCategory(label);
+    });
+
     // show all products by category
     function getProductByCategory(category) {
       $('.content').empty();
@@ -33,13 +40,6 @@ $(document).ready(function() {
         }
       });
     }
-
-    // get link text in header navbar
-    $('.navbar-brand, .nav li a').click(function(e) {
-      e.preventDefault();
-      var label = $(this).text();
-      getProductByCategory(label);
-    });
 
     // run this for first time only
     getProductByCategory('All');
