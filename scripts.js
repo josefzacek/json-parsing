@@ -10,13 +10,16 @@ $(document).ready(function() {
 
     // get top level
     category = data.Category;  // data['Category'];
-    product = data.Product;    // date['Product'];
+    product = data.Product;    // data['Product'];
 
 
     // show top level
-    $.each(data, function(key, value){
-      $('.content-top-level').append('<p>'+ key + '</p>');
-    });
+    function topLevel() {
+      $('.content').empty();
+      $.each(data, function(key, value){
+        $('.content').append('<p>'+ key + '</p>');
+      });
+    }
 
 
     // show full category
@@ -66,14 +69,28 @@ $(document).ready(function() {
       });
     });
 
-
-    // show all vegetable products on vegetable page
-    $.each(product, function(key, value) {
-      $.each(value, function(key, value){
-        $('.content-vegetable').append('<p>'+ value + '</p>');
+    // show all products by category
+    function getProductByCategory(category) {
+      $('.content').empty();
+      $.each(product, function(key, value) {
+        if (value.product_category === category || category === 'All' || category === 'Parse JSON'){
+          $.each(value, function(key, value){
+            $('.content').append('<p>'+ value + '</p>');
+          });
+          $('.content').append('<hr>');
+        }
       });
-      $('.content-vegetable').append('<hr>');
+    }
+
+    // get link text in header navbar
+    $('.navbar-brand, .nav li a').click(function(e) {
+      e.preventDefault();
+      var label = $(this).text();
+      getProductByCategory(label);
     });
+
+    // run this for first time only
+    getProductByCategory('All');
 
   });
 
