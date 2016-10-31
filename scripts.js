@@ -89,6 +89,9 @@ $(document).ready(function() {
       getProductByCategory(label);
     });
 
+    // run this for first time only
+    getProductByCategory('All');
+
   });
 
     
