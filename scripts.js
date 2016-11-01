@@ -32,16 +32,11 @@ $(document).ready(function() {
     function getProductByCategory(category) {
       $('.content').empty();
       $.each(product, function(key, value) {
-        if (value.product_category === category || category === 'All' || category === 'Parse JSON'){
-          $.each(value, function(key, value){
-            if (key == 'product_name') {
-              $('.content').append('<h1>' + value + '</h1>');
-            } else if (key == 'product_id') {
-              $('.content').append('');
-            } else {
-              $('.content').append('<p>'+ value + '</p>');
-            }
-          });
+        if (value.product_category === category || category === 'All' || category === 'Parse JSON') {
+          $('.content').append('<h1><a href=' + value.product_id + ' title=' + value.product_category + '> ' + value.product_name + '</a></h1>');
+          $('.content').append('<p>'+ value.product_category + '</p>');
+          $('.content').append('<p>'+ value.product_price + '</p>');
+          $('.content').append('<p><small><a href=' + value.product_id + ' title=' + value.product_category + '>  Read more... </a></small</p>');
           $('.content').append('<hr>');
         }
       });
