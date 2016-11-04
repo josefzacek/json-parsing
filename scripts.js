@@ -33,7 +33,7 @@ $(document).ready(function() {
       $('.content').empty();
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON') {
-          $('.content').append('<h1><a href=' + value.product_id + ' title=' + value.product_category + '> ' + value.product_name + '</a></h1>');
+          $('.content').append('<h1><a href=' + value.product_id + '  class="product-detail" title=' + value.product_category + '> ' + value.product_name + '</a></h1>');
           $('.content').append('<p>'+ value.product_category + '</p>');
           $('.content').append('<p>'+ value.product_price + '</p>');
           $('.content').append('<p><small><a href=' + value.product_id + ' title=' + value.product_category + '>  Read more... </a></small</p>');
