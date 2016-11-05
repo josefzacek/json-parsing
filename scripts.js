@@ -48,6 +48,19 @@ $(document).ready(function() {
       var productHref = $(this).attr("href");
       showProductDetail(productHref);
     });
+
+    // show product detail
+    function showProductDetail(productHref){
+      $('.content').empty();
+      $.each(product, function(key, value) {
+        if (value.product_id === productHref) {
+          $('.content').append('<h1>' + value.product_name + '</h1>');
+          $('.content').append('<p>'+ value.product_category + '</p>');
+          $('.content').append('<p>'+ value.product_price + '</p>');
+        }
+      });
+    }
+
     // run this for first time only
     getProductByCategory('All');
 
