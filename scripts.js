@@ -33,11 +33,30 @@ $(document).ready(function() {
       $('.content').empty();
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON') {
-          $('.content').append('<h1><a href=' + value.product_id + ' title=' + value.product_category + '> ' + value.product_name + '</a></h1>');
+          $('.content').append('<h1><a href=' + value.product_id + ' class="product-detail" title=' + value.product_category + '> ' + value.product_name + '</a></h1>');
           $('.content').append('<p>'+ value.product_category + '</p>');
           $('.content').append('<p>'+ value.product_price + '</p>');
-          $('.content').append('<p><small><a href=' + value.product_id + ' title=' + value.product_category + '>  Read more... </a></small</p>');
+          $('.content').append('<p><small><a href=' + value.product_id + ' class="product-detail" title=' + value.product_category + '>  Read more... </a></small</p>');
           $('.content').append('<hr>');
+        }
+      });
+    }
+
+    // get product detail id from link  
+    $(".content").on("click", 'a.product-detail', function(e){
+      e.preventDefault();
+      var productHref = $(this).attr("href");
+      showProductDetail(productHref);
+    });
+
+    // show product detail
+    function showProductDetail(productHref){
+      $('.content').empty();
+      $.each(product, function(key, value) {
+        if (value.product_id === productHref) {
+          $('.content').append('<h1>' + value.product_name + '</h1>');
+          $('.content').append('<p>'+ value.product_category + '</p>');
+          $('.content').append('<p>'+ value.product_price + '</p>');
         }
       });
     }
