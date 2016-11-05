@@ -42,6 +42,12 @@ $(document).ready(function() {
       });
     }
 
+    // get product detail id from link  
+    $(".content").on("click", 'a.product-detail', function(e){
+      e.preventDefault();
+      var productHref = $(this).attr("href");
+      showProductDetail(productHref);
+    });
     // run this for first time only
     getProductByCategory('All');
 
