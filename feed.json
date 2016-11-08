@@ -1,0 +1,81 @@
+{  
+   "Category":[  
+      {  
+         "category_name":"All",
+         "category_description":"All"
+      },
+      {  
+         "category_name":"Vegetable",
+         "category_description":"Vegetable food"
+      },
+      {  
+         "category_name":"Fruit",
+         "category_description":"Fruit food"
+      }
+   ],
+   "Product":[  
+      {  
+         "product_id":"1",
+         "product_name":"Bell Pepper",
+         "product_category":"Vegetable",
+         "product_price":"1.25",
+         "product_short_description":"Pepper is a tender, warm-season vegetable. Pepper plants require somewhat higher temperatures, grow more slowly and are smaller than most tomato plants. Brightly colored, sweet bell pepper varieties have recently burst onto the scene.",
+         "product_long_description":"The bell pepper (also known as sweet pepper or pepper in the United Kingdom, Canada and Ireland, and capsicum in Australia, India, Pakistan, Bangladesh, Singapore and New Zealand) is a cultivar group of the species Capsicum annuum. Cultivars of the plant produce fruits in different colors, including red, yellow, orange, green, chocolate/brown, vanilla/white, and purple. Bell peppers are sometimes grouped with less pungent pepper varieties as 'sweet peppers'. The ribs and seeds inside bell peppers may be consumed, but some people find the taste to be bitter. Peppers are native to Mexico, Central America, and northern South America. Pepper seeds were imported to Spain in 1493, and from there spread to other European, African, and Asian countries. Today, China is the world's largest pepper producer, followed by Mexico and Indonesia. Ideal growing conditions for bell peppers include warm soil, that is kept moist but not waterlogged. Bell peppers are sensitive to an abundance of moisture and extreme temperatures.",
+         "product_image":""
+      },
+      {  
+         "product_id":"2",
+         "product_name":"Cucumber",
+         "product_category":"Vegetable",
+         "product_price":"1.99",
+         "product_short_description":"",
+         "product_long_description":"",
+         "product_image":""
+      },
+      {  
+         "product_id":"3",
+         "product_name":"Banana",
+         "product_category":"Fruit",
+         "product_price":"0.99",
+         "product_short_description":"",
+         "product_long_description":"",
+         "product_image":""
+      },
+      {  
+         "product_id":"4",
+         "product_name":"Apple",
+         "product_category":"Fruit",
+         "product_price":"1.50",
+         "product_short_description":"",
+         "product_long_description":"",
+         "product_image":""
+      },
+      {  
+         "product_id":"5",
+         "product_name":"Orange",
+         "product_category":"Fruit",
+         "product_price":"0.75",
+         "product_short_description":"",
+         "product_long_description":"",
+         "product_image":""
+      },
+      {  
+         "product_id":"6",
+         "product_name":"Pomegranite",
+         "product_category":"Fruit",
+         "product_price":"3.99",
+         "product_short_description":"",
+         "product_long_description":"",
+         "product_image":""
+      },
+      {  
+         "product_id":"7",
+         "product_name":"Artichoke",
+         "product_category":"Vegetable",
+         "product_price":"5.99",
+         "product_short_description":"",
+         "product_long_description":"",
+         "product_image":""
+      }
+   ]
+}
