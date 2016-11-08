@@ -35,6 +35,8 @@ $(document).ready(function() {
           $('.content').append('<p><small><a href=' + value.product_id + ' class="product-detail" title=' + value.product_category + '>  Read more... </a></small</p>');
           $('.content').append('<h1><a href=' + value.product_id + ' class="product-detail" title="' + value.product_name + '"> ' + value.product_name + '</a></h1>');
           $('.content').append('<p><b>Category:</b> ' + value.product_category + '</p>');
+          $('.content').append('<p><b>Short description:</b></p>');
+          $('.content').append('<p>'+ value.product_short_description + '</p>');
           $('.content').append('<p><b>Price:</b> '+ value.product_price + '</p>');
           $('.content').append('<hr>');
         }
