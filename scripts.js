@@ -63,6 +63,13 @@ $(document).ready(function() {
       });
     }
 
+    // link to on show product page to return to products listings
+    $(".content").on("click", 'a.products-listing', function(e){
+      e.preventDefault();
+      var label = $(this).text();
+      getProductByCategory(label);
+    });
+
     // run this for first time only
     getProductByCategory('All');
 
