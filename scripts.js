@@ -31,7 +31,7 @@ $(document).ready(function() {
     function getProductByCategory(category) {
       $('.content').empty();
       $.each(product, function(key, value) {
-        if (value.product_category === category || category === 'All' || category === 'Parse JSON') {
+        if (value.product_category === category || category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
           $('.content').append('<h1><a href=' + value.product_id + ' class="product-detail" title="' + value.product_name + '"> ' + value.product_name + '</a></h1>');
           $('.content').append('<p><b>Category:</b> ' + value.product_category + '</p>');
           $('.content').append('<p><b>Short description:</b></p>');
@@ -58,9 +58,17 @@ $(document).ready(function() {
           $('.content').append('<h1>' + value.product_name + '</h1>');
           $('.content').append('<p>'+ value.product_category + '</p>');
           $('.content').append('<p>'+ value.product_price + '</p>');
+          $('.content').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
         }
       });
     }
+
+    // link to on show product page to return to products listings
+    $(".content").on("click", 'a.products-listing', function(e){
+      e.preventDefault();
+      var label = $(this).text();
+      getProductByCategory(label);
+    });
 
     // run this for first time only
     getProductByCategory('All');
