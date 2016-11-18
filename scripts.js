@@ -57,6 +57,7 @@ $(document).ready(function() {
         if (value.product_id === productHref) {
           $('.content').append('<h1>' + value.product_name + '</h1>');
           $('.content').append('<p><b>Category:</b> '+ value.product_category + '</p>');
+          $('.content').append('<p><b>Long description:</b></p>');
           $('.content').append('<p>'+ value.product_long_description + '</p>');
           $('.content').append('<p><b>Price:</b> '+ value.product_price + '</p>');
           $('.content').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
