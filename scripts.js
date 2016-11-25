@@ -3,6 +3,10 @@ $(document).ready(function() {
   // get source with json
   var source = 'feed.json';
 
+  // get root url
+  var full_url = window.location.pathname;
+  var url = full_url.substring(0, full_url.indexOf('/index.html'));
+
   // Load JSON-encoded data from the server using a GET HTTP request.
   // http://api.jquery.com/jquery.getjson/
   $.getJSON( source, function( data ) {
