@@ -33,6 +33,7 @@ $(document).ready(function() {
     // show all products by category
     function getProductByCategory(category) {
       $('.content').empty();
+      $('.content').append( '<div class="col-md-12 content-listing"></div>');
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
           $('.content').append('<h1><a href=' + value.product_id + ' class="product-detail" title="' + value.product_name + '"> ' + value.product_name + '</a></h1>');
