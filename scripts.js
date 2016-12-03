@@ -57,6 +57,8 @@ $(document).ready(function() {
     // show product detail
     function showProductDetail(productHref){
       $('.content').empty();
+      $('.content').append( '<div class="col-md-6 content-product-detail-text"></div>');
+      $('.content').append( '<div class="col-md-6 content-product-detail-image"></div>');
       $.each(product, function(key, value) {
         if (value.product_id === productHref) {
           $('.content').append('<h1>' + value.product_name + '</h1>');
