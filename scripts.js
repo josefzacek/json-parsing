@@ -61,11 +61,11 @@ $(document).ready(function() {
       $('.content').append( '<div class="col-md-6 content-product-detail-image"></div>');
       $.each(product, function(key, value) {
         if (value.product_id === productHref) {
-          $('.content').append('<h1>' + value.product_name + '</h1>');
-          $('.content').append('<p><b>Category:</b> '+ value.product_category + '</p>');
-          $('.content').append('<p><b>Long description:</b></p>');
-          $('.content').append('<p>'+ value.product_long_description + '</p>');
-          $('.content').append('<p><b>Price:</b> '+ value.product_price + '</p>');
+          $('.content-product-detail-text').append('<h1>' + value.product_name + '</h1>');
+          $('.content-product-detail-text').append('<p><b>Category:</b> '+ value.product_category + '</p>');
+          $('.content-product-detail-text').append('<p><b>Long description:</b></p>');
+          $('.content-product-detail-text').append('<p>'+ value.product_long_description + '</p>');
+          $('.content-product-detail-text').append('<p><b>Price:</b> '+ value.product_price + '</p>');
           if (value.product_image.length) {
             $('.content').append('<div><img src="' + url + '/images/' + value.product_image + '" class="img-responsive" ></div>');
           } else {
