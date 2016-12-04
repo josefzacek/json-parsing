@@ -67,9 +67,9 @@ $(document).ready(function() {
           $('.content-product-detail-text').append('<p>'+ value.product_long_description + '</p>');
           $('.content-product-detail-text').append('<p><b>Price:</b> '+ value.product_price + '</p>');
           if (value.product_image.length) {
-            $('.content').append('<div><img src="' + url + '/images/' + value.product_image + '" class="img-responsive" ></div>');
+            $('.content-product-detail-image').append('<img src="' + url + '/images/' + value.product_image + '" class="img-responsive center-block img-thumbnail" >');
           } else {
-            $('.content').append('<div><img src="' + url + '/images/image-not-available.jpg" class="img-responsive" ></div>');
+            $('.content-product-detail-image').append('<img src="' + url + '/images/image-not-available.jpg" class="img-responsive center-block img-thumbnail" >');
           }          
           $('.content-product-detail-text').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
         }
