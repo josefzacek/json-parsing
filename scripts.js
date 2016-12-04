@@ -71,7 +71,7 @@ $(document).ready(function() {
           } else {
             $('.content').append('<div><img src="' + url + '/images/image-not-available.jpg" class="img-responsive" ></div>');
           }          
-          $('.content').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
+          $('.content-product-detail-text').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
         }
       });
     }
