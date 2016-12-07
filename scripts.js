@@ -18,7 +18,7 @@ $(document).ready(function() {
     $.each(category, function(key, value) {
       $.each(value, function(key, value){
         if(key == 'category_name' ) {
-          $('.navbar-nav').append('<li><a href="" title=' + value + '>' + value + '</a></li>');
+          $('.dynamic-navbar').append('<li><a href="" title=' + value + '>' + value + '</a></li>');
         }
       });
     });
