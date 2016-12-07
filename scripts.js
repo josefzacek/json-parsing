@@ -40,7 +40,7 @@ $(document).ready(function() {
           $('.content-listing').append('<p><b>Category:</b> ' + value.product_category + '</p>');
           $('.content-listing').append('<p><b>Short description:</b></p>');
           $('.content-listing').append('<p>'+ value.product_short_description + '</p>');
-          $('.content-listing').append('<p><b>Price:</b> '+ value.product_price + '</p>');
+          $('.content-listing').append('<p><b>Price:</b> &euro;'+ value.product_price + '</p>');
           $('.content-listing').append('<p><small><a href=' + value.product_id + ' title="' + value.product_name + '" class="product-detail">  Read more... </a></small</p>');
           $('.content-listing').append('<hr>');
         }
@@ -65,7 +65,7 @@ $(document).ready(function() {
           $('.content-product-detail-text').append('<p><b>Category:</b> '+ value.product_category + '</p>');
           $('.content-product-detail-text').append('<p><b>Long description:</b></p>');
           $('.content-product-detail-text').append('<p>'+ value.product_long_description + '</p>');
-          $('.content-product-detail-text').append('<p><b>Price:</b> '+ value.product_price + '</p>');
+          $('.content-product-detail-text').append('<p><b>Price:</b> &euro;'+ value.product_price + '</p>');
           if (value.product_image.length) {
             $('.content-product-detail-image').append('<img src="' + url + '/images/' + value.product_image + '" class="img-responsive center-block img-thumbnail" >');
           } else {
