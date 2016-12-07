@@ -47,6 +47,14 @@ $(document).ready(function() {
       });
     }
 
+    // display feed when clicked on 'Feed' link
+    $('#feed').click(function(e) {
+      e.preventDefault();
+      $('.content').empty();
+      $('.content').append( '<div class="col-md-12"><pre><code class="feed"></code></pre></div>');
+      $(".feed").load("feed.json");
+    });
+
     // get product detail id from link  
     $(".content").on("click", 'a.product-detail', function(e){
       e.preventDefault();
