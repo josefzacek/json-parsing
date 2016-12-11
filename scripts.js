@@ -3,9 +3,6 @@ $(document).ready(function() {
   // get source with json
   var source = 'feed.json';
 
-  // get root url
-  var url = window.location.pathname;
-
   // Load JSON-encoded data from the server using a GET HTTP request.
   // http://api.jquery.com/jquery.getjson/
   $.getJSON( source, function( data ) {
@@ -75,9 +72,9 @@ $(document).ready(function() {
           $('.content-product-detail-text').append('<p>'+ value.product_long_description + '</p>');
           $('.content-product-detail-text').append('<p><b>Price:</b> &euro;'+ value.product_price + '</p>');
           if (value.product_image.length) {
-            $('.content-product-detail-image').append('<img src="' + url + '/images/' + value.product_image + '" class="img-responsive center-block img-thumbnail" >');
+            $('.content-product-detail-image').append('<img src="images/' + value.product_image + '" class="img-responsive center-block img-thumbnail" >');
           } else {
-            $('.content-product-detail-image').append('<img src="' + url + '/images/image-not-available.jpg" class="img-responsive center-block img-thumbnail" >');
+            $('.content-product-detail-image').append('<img src="images/image-not-available.jpg" class="img-responsive center-block img-thumbnail" >');
           }          
           $('.content-product-detail-text').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
         }
