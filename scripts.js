@@ -77,6 +77,7 @@ $(document).ready(function() {
           } else {
             $('.content-product-detail-image').append('<img src="images/image-not-available.jpg" class="img-responsive center-block img-thumbnail" >');
           }
+          $('.content-product-detail-text').append('<p><b><a href="mailto:info@josefzacek.com?subject=Parse JSON - ' + value.product_name + ' (ID:'+ value.product_id + ') product">Contact us about this product</a></b></p>');  
           $('.content-product-detail-text').append('<p><a href="" title="Products Listing" class="products-listing">Products Listing</a></p>');
         }
       });
