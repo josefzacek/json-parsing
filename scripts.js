@@ -31,7 +31,8 @@ $(document).ready(function() {
     function getProductByCategory(category) {
       $('.content').empty();
       $('.content').append( '<div class="col-md-12 content-listing"></div>');
-      $('.content-listing').append('<div class="alert alert-info"><strong>Total items:</strong> ' + product.length + '</div>');
+      $('.content-listing').append('<div class="alert alert-info"></div>');
+      var number_of_products = 0;
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
           $('.content-listing').append(
@@ -42,11 +43,20 @@ $(document).ready(function() {
               '<p>'+ value.product_short_description + '</p>' +
               '<p><b>Price:</b> &euro;'+ value.product_price + '</p>' +
               '<p><small><a href=' + value.product_id + ' title="' + value.product_name + '" class="product-detail">  Read more... </a></small</p>' +
-              '<hr>' + 
+              '<hr>' +
             '</div>'
           );
+          number_of_products++;
         }
       });
+      console.log(category);
+
+      if (category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
+        $('.alert.alert-info').html('<strong>Total items:</strong> ' + number_of_products );
+      } else {
+        $('.alert.alert-info').html('<strong>' + category + '</strong> category contains ' + number_of_products + ' items');
+      }
+      
     }
 
     // display feed when clicked on 'Feed' link
@@ -100,11 +110,24 @@ $(document).ready(function() {
   });
   
   
+  
+  var hh = window.screen.height;
+console.log(hh);
+
+$(".product").each(function(){
+	console.log($(this).offset().top - $(window).scrollTop());
+	aa = $(this).offset().top - $(window).scrollTop();
+	if (aa > hh){
+		$(this).hide();
+    }
+
+});
+  
   $(window).scroll(function() {
     if($(window).scrollTop() == $(document).height() - $(window).height()) {
-      console.log('bottom');
+      $(".product").show(3000);
     }
-});
+  });
 
     
 });
