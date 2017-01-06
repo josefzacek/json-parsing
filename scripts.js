@@ -42,10 +42,10 @@ $(document).ready(function() {
               '<p>'+ value.product_short_description + '</p>' +
               '<p><b>Price:</b> &euro;'+ value.product_price + '</p>' +
               '<p><small><a href=' + value.product_id + ' title="' + value.product_name + '" class="product-detail">  Read more... </a></small</p>' +
-              '<hr>' + 
+              '<hr>' +
             '</div>'
           );
-        }
+        };
       });
     }
 
