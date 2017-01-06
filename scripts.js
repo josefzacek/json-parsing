@@ -46,8 +46,8 @@ $(document).ready(function() {
               '<hr>' +
             '</div>'
           );
+          number_of_products++
         };
-        number_of_products++
       });
     }
 
