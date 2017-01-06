@@ -32,6 +32,7 @@ $(document).ready(function() {
       $('.content').empty();
       $('.content').append( '<div class="col-md-12 content-listing"></div>');
       $('.content-listing').append('<div class="alert alert-info"></div>');
+      var number_of_products = 0;
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
           $('.content-listing').append(
