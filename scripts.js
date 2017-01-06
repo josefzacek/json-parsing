@@ -47,6 +47,7 @@ $(document).ready(function() {
             '</div>'
           );
         };
+        number_of_products++
       });
     }
 
