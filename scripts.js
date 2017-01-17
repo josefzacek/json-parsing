@@ -31,7 +31,8 @@ $(document).ready(function() {
     function getProductByCategory(category) {
       $('.content').empty();
       $('.content').append( '<div class="col-md-12 content-listing"></div>');
-      $('.content-listing').append('<div class="alert alert-info"><strong>Total items:</strong> ' + product.length + '</div>');
+      $('.content-listing').append('<div class="alert alert-info"></div>');
+      var number_of_products = 0;
       $.each(product, function(key, value) {
         if (value.product_category === category || category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
           $('.content-listing').append(
@@ -45,8 +46,16 @@ $(document).ready(function() {
               '<hr>' +
             '</div>'
           );
+          number_of_products++
         };
       });
+      
+      // display number of products
+      if (category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
+        $('.alert.alert-info').html('<strong>Total items:</strong> ' + number_of_products );
+      } else {
+        $('.alert.alert-info').html('<strong>' + category + '</strong> category contains ' + number_of_products + ' items');
+      }
     }
 
     // display feed when clicked on 'Feed' link
