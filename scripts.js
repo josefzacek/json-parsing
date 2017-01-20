@@ -106,27 +106,5 @@ $(document).ready(function() {
     // run this for first time only
     getProductByCategory('All');
 
-  });
-  
-  
-  
-  var hh = window.screen.height;
-console.log(hh);
-
-$(".product").each(function(){
-	console.log($(this).offset().top - $(window).scrollTop());
-	aa = $(this).offset().top - $(window).scrollTop();
-	if (aa > hh){
-		$(this).hide();
-    }
-
-});
-  
-  $(window).scroll(function() {
-    if($(window).scrollTop() == $(document).height() - $(window).height()) {
-      $(".product").show(3000);
-    }
-  });
-
-    
+  });    
 });
