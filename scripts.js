@@ -46,8 +46,8 @@ $(document).ready(function() {
               '<hr>' +
             '</div>'
           );
-          number_of_products++
-        };
+          number_of_products++;
+        }
       });
       
       // display number of products
@@ -106,7 +106,5 @@ $(document).ready(function() {
     // run this for first time only
     getProductByCategory('All');
 
-  });
-
-    
+  });    
 });
