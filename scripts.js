@@ -49,13 +49,13 @@ $(document).ready(function() {
           number_of_products++;
         }
       });
-
+      
+      // display number of products
       if (category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
         $('.alert.alert-info').html('<strong>Total items:</strong> ' + number_of_products );
       } else {
         $('.alert.alert-info').html('<strong>' + category + '</strong> category contains ' + number_of_products + ' items');
       }
-      
     }
 
     // display feed when clicked on 'Feed' link
