@@ -49,7 +49,6 @@ $(document).ready(function() {
           number_of_products++;
         }
       });
-      console.log(category);
 
       if (category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
         $('.alert.alert-info').html('<strong>Total items:</strong> ' + number_of_products );
