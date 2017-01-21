@@ -49,6 +49,15 @@ $(document).ready(function() {
           number_of_products++;
         }
       });
+
+      // set opacity: 0 to products outside viewing window
+      var windowHeight = $(window).height();
+      $('.product').each(function(){
+        var productPosition = $(this).offset().top;
+        if (productPosition > windowHeight) {
+          $(this).css('opacity', '0');
+        }
+      });
       
       // display number of products
       if (category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
