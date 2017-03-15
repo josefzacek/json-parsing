@@ -58,6 +58,17 @@ $(document).ready(function() {
           $(this).css('opacity', '0');
         }
       });
+
+      // show hidden products as user scroll
+      $(window).scroll( function(){
+        var windowHeight = $(window).scrollTop() + $(window).height();
+        $('.product').each( function(product){
+          var bottom_of_object = $(this).offset().top;
+          if( windowHeight > bottom_of_object ){
+            $(this).animate({'opacity':'1'},800);
+          }
+        }); 
+      });
       
       // display number of products
       if (category === 'All' || category === 'Parse JSON' || category === 'Products Listing') {
